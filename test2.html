@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button class="animate">down/up</button>
+</body>
+</html>
+<script>
+    /*Jquery animate use for create own action in jquery
+     syntax:  $(selector).animate({params,value},speed,callback);*/
+       //animates
+       $(function(){
+            $(".animate").click(function(){
+                var defaultSize=$(this).css("font-size");
+
+      $(this).animate({fontSize: "50px"},1000,function(){
+                alert("animate acitive");
+                $(this).animate({fontSize:defaultSize},2000);
+      });
+            });
+       });
+</script>

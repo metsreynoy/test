@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+      <!-----------------------slide-->
+      <button id="du">down/up</button>
+      <h1>Slide up/down/toggle example</h1>
+      <button id="up">UP</button>
+      <button id="down">Down</button>
+      <button id="toggle">Toggle</button>
+       <div class="text">
+        <p>
+             this is test for slide up down and toggle 
+             this is test for slide up down and toggle
+             this is test for slide up down and toggle 
+             this is test for slide up down and toggle
+             this is test for slide up down and toggle 
+             this is test for slide up down and toggle
+             this is test for slide up down and toggle 
+             this is test for slide up down and toggle
+        </p>
+       </div>
+</body>
+</html>
+<script>
+    //slide up down and toggle
+    //up
+    $(function(){
+
+        $("#up").click(function(){
+      $(".text").slideUp(1000, function(){
+          alert("slide up active");
+      });
+         });
+
+         $("#down").click(function(){
+      $(".text").slideUp(1000, function(){
+          alert("slide down active");
+      });
+         });
+
+
+         $("#toggle").click(function(){
+      $(".text").slideToggle(1000, function(){
+          alert("slide toggle active");
+      });
+         });
+
+
+
+    }); 
+
+   
+       
+     
+
+
+      
+</script>

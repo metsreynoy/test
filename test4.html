@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test4</title>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <style>
+          .btn{
+            background-color: rgba(0, 0, 255, 0.774);
+            padding: 10px;
+             top: 0;
+             position: fixed;
+           /*  transform: translate(0,50%);*/
+              left:50% ;
+              transform: translate(-50%);
+              border-radius: 0px 0px 10px 10px;
+              
+           }
+           button{
+                background-color: rgba(0, 0, 255, 0.795);
+                border: none;
+                color: white;
+                border-radius: 5px;
+                font-size: x-large;
+                padding: 15px 20px;
+                margin: 0px 10px;
+           }
+           .image{
+            background-color:grey ;
+            padding: 10px;
+            margin: 20px;
+           }
+           p{
+            font-size:30px ;
+            color: white;
+           }
+           img{
+            wi
+           }
+    </style>
+</head>
+<body>
+         <div class="imagegallery">
+            <div class="btn">
+                    <button onclick="showimage('all')">All</button>
+                    <button onclick="showimage('html')">html</button>
+                    <button onclick="showimage('css')">css</button>
+                    <button onclick="showimage('javascript')">javascript</button>
+                    <button onclick="showimage('jQuery')">jQuery</button>
+                    <button onclick="showimage('bootstrab')">bootstrab</button>
+             </div>
+                          
+                          
+                <br><br><br><br><br><br><br><br><br><br>
+
+                <div class="image html">
+                    
+                     <img src="C:\Users\MSI GF76\AppData\Local\Temp\Rar$DIa12236.26766\bootstrab.png" alt="bootstrap_image">
+                           <p>HTMl stands for hypertext Markup language it is the standard markup language used to
+                            creat and design documents on the world wide web. HTML describes the structure of a web page 
+                            using a markup system of elements or tags, each denoted by
+                           </p>
+
+                </div>
+
+
+                <div class="image css">
+                    
+                    <img src="C:\Users\MSI GF76\AppData\Local\Temp\Rar$DIa12236.26766\bootstrab.png" alt="bootstrap_image">
+                        <p>  CSS, or Cascading Style Sheets, is a style sheet
+                             language used for describing the presentation and formatting of
+                              a document written in a markup language, such as HTML or XML. 
+                              The primary purpose o f CSS is to separate the structure and content of 
+                              a d ocument from its visual presentation. By using CSS, web designers 
+                              and developers can control the layout,
+                              appear ance, and style of multiple web pages consistently
+                           </p>
+
+                </div>
+                
+                <div class="image css">
+
+                <img src="C:\Users\MSI GF76\AppData\Local\Temp\Rar$DIa12236.26766\bootstrab.png" alt="bootstrap_image">
+                           <p>
+                           </p>
+
+                </div>
+
+                <div class="image css">
+
+                <img src="C:\Users\MSI GF76\AppData\Local\Temp\Rar$DIa12236.26766\bootstrab.png" alt="bootstrap_image">
+                           <p>
+                           </p>
+
+                </div>
+
+
+                  <div class="image css">
+                <img src="C:\Users\MSI GF76\AppData\Local\Temp\Rar$DIa12236.26766\bootstrab.png" alt="bootstrap_image">
+                           <p>
+                           </p>
+
+                </div>
+
+                 <div  class="image css">
+                <img src="C:\Users\MSI GF76\AppData\Local\Temp\Rar$DIa12236.26766\bootstrab.png" alt="bootstrap_image">
+                           <p>
+                           </p>
+
+                </div>
+
+
+         </div>
+</body>
+</html>
+<script>
+        function showimage(img){
+                   $('.image').hide();
+
+                   if(Image=='all'){
+                       $('.image').show();
+
+                   }else{
+                     $('.'+img).show();
+                   }
+        }
+</script>

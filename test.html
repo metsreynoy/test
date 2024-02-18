@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .transform{
+               width:100px;
+               height:100px;
+               background-color: blue;
+               margin-top: 100pcx;
+               margin-left: 100px;
+               transition: width 3s; /*សម្រាប់គំណត់ពេលផ្លាស់ប្តូរ*/
+               transform: scale(1.5);;
+              // transition: height ;
+
+        }
+        .transform:hover{
+
+            transform: skew(0deg,50deg);
+            
+          /*  width: 400px;
+            height: 400px;*/
+          /*  transform: rotate(100deg);*/
+        /*   transform: translate(100px,50px); */
+        /*skew(x,y)បត់អក្សរx,yខ្នាតតិចជាdeg*៊
+        }
+
+        /*rotate()គឺសម្រាប់បង្វិលខ្នាតវាតិចជាdegគឺក្រេdegress*/
+        /*translate()គឺបម្រាប់បំលែងការផ្លាស់ទីនៃធាតុតាមអ័ក្យ​  x,y*/
+        /*scalepសម្រាប់ពង្រីកទំហំដោយតម្លៃ១.5កឺស្មើរស្មើរ៥០ភាគរយនៃទំហំដើម*/
+
+    }
+    </style>
+</head>
+<body>
+          <div class="transform"></div>
+</body>
+</html>

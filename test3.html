@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise jquery1</title>
+  <script src="jquery-3.7.1.min.js"></script>
+    <style>
+              .imageslider{
+                     width: 400px;
+                    background-color: aqua;
+                  overflow: hidden;  
+                     margin: 20px auto;
+                  padding: 10px;
+              }
+
+              img{
+                 width: 100%;
+  
+              }
+              ul{
+                list-style: none;
+                display: flex;
+                padding: 0;
+                transition:transform 1s;
+                background-color: aqua;
+                padding: 10px;
+               
+              }
+              li{
+                  flex-basis: 400px;/*flexbasis:400px is forកំណតធាតុflexដែលចេញដំបូងមានទំហំ៤០០ភីកសែលហើយនឹងមិន
+                  មិនរួមតូចទេប្រសិនបើមិនមានទំហំគ្រប់គ្រាន់នៅក្នុងflex container*/
+                  flex-shrink: 0; /*cammpt shirnk 1 true, 0false*/
+
+              }
+              button{
+                background-color: blue;
+                padding: 10px 15px;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                font-size: 15px;
+                color: red;
+                margin-right: 10px;
+              }
+              #start{
+                background-color:purple ;
+              }
+    </style>
+</head>
+<body>
+            <div class="imageslider">
+                 <ul>
+                     <li><img src="C:\Users\MSI GF76\AppData\Local\Temp\Rar$DIa12236.26766\bootstrab.png" alt="bootstrap_image"></li>
+                     <li><img src="C:\Users\MSI GF76\AppData\Local\Temp\Rar$DIa12236.29638\css.png" alt="css_image"></li>
+                     <li><img src="C:\Users\MSI GF76\AppData\Local\Temp\Rar$DIa12236.31866\html.png" alt="html_image"></li>
+                     <li><img src="C:\Users\MSI GF76\AppData\Local\Temp\Rar$DIa12236.34569\javascript.png" alt="javascript_image"></li>
+                     <li><img src="C:\Users\MSI GF76\AppData\Local\Temp\Rar$DIa12236.36100\jQuery1.png" alt="jQuery_image"></li>
+                 </ul>
+                 <button id="stop">Stop</button>
+                 <button id="start">Start</button>              
+            </div>
+           
+</body>
+</html>
+<script>
+ /*   $(document).ready(function(){
+        var Currentindex=0;
+         function nextSlide(){
+             var currentindex= (Currentindex +1 ) % 5; //$('li').lenght();
+             //currentindex=1;
+             var newTransformValue= -Currentindex*400;   //-400 currentindex=1;
+
+             $('ul').css('transform','translateX('+newTransformValue+')');
+         }
+          function startSlider(){
+        //  if(!interval){//បើមិនទាន់interval functionនឹងដើរតែបើintervalហើយfunctionវាមិនដើរទេ
+           interval=setInterval(nextSlide,1000);
+        //  }
+
+          }
+
+              startSlider();   //start the slide intaialy
+
+          function stopslider(){
+                   clearInterval(interval);
+                //   interval=null;
+          }
+               $("#stop").click(stopslider);
+    });*/
+</script>
+
+<script>
+    $(Document).ready(function(){
+    var CurrentIndex=0;
+    
+    function nextSlide(){
+           CurrentIndex= (CurrentIndex+1) % 5;     //cureentIndex=1;
+       
+           var newTransformValue= -CurrentIndex * 400;  //400 cureentIndex=1;
+           var interval;
+
+           $('ul').css('transform','translateX('+newTransformValue+'px)');
+     }
+
+       function startSlider(){
+
+       // if(!interval){//បើមិនទាន់interval functionនឹងដើរតែបើ intervalហើយ functionមិនដើរទែ
+         interval= setInterval(nextSlide,1000)  ;
+       // }
+       }
+
+        startSlider(); ///start the sild initially
+
+        $('#start').click(startSlider);
+
+    function stopSlider(){
+   clearInterval(interval);
+   //  interval=null;
+        }
+         $('#stop').click(stopSlider);
+});
+</script>
+<!-------note 
+      transform:
+      /*convert*/
+    /* rotate(45deg)   បង្វិល(រ៉ូតថិត)​ the "deg" stands for degress,*/
+    
+    /* translate(500px,0px)  មុខងារសម្រាប់បំប្លែងនៅក្នុងcssដែលផ្លាស់ទីធាតុតាមអ័ក្សx នឹងy*/
+
+    /*scales(1.50)   មុខងារសម្រាាប់ពង្រីកទំហំតម្លៃ១.៥គឺស្មើនឹង៥០%នៃទំហំដើម*៊
+
+    ៊*skew(0deg,50deg)     បត់តាមអ័ក្សxand y
+
+
+
+    note  setInterval(callback,delay):setInterval is a javascript function that is used to 
+    repeatedly exectue a function or a piece of code at a specifiled time interval
+
+
+    * clearInterval():function is a built-in javascript function used to stop the execution
+    of setInterval;
+
+  ------------------>

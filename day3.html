@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <input type="button" value="InputTypebtton">
+    <input type="button" value="InputTypesubmit"><br><br><br>
+
+         <button>hide</button>
+         <button class="show">show</button>
+         <p>this is a text for hide using button above</p><br><br><br>
+
+          <button id="showall">showall</button>
+            <button id="hide">Submit</button>
+            <button id="hide1">result</button>
+            <button id="hide2">got It</button>
+
+
+            <table border="1px">
+                 <tr >
+                <td>row1,column1</td>
+                <td>row1,colume2</td>
+                  </tr>
+
+                  <tr>
+                    <td>row2,column1</td>
+                    <td>row2,colume2</td>
+                      </tr>
+
+                      <tr>
+                        <td>row3,column1</td>
+                        <td>row3,colume2</td>
+                          </tr>
+            </table>
+
+
+            <button id="showall">down / up</button>
+</body>
+</html>
+   <script>
+        $(function(){
+             $("button").click(function(){
+                    $("p").hide();
+             });
+               $(".show").click(function(){
+                $("p").show();
+               });
+
+               $("body").css({"background-color":"red","font-size":"40px"});
+
+               $("#hide").click(function(){
+                    $(this).hide();
+               });
+
+               $("#showall").click(function(){
+                      $("#hide").show();
+                      $("#hide1").show();
+                      $("#hide2").show();
+               });
+
+     $(":button").css({"color":"yellow","font-size":"50px"});
+
+       $("table").css({"border":"1px solid black","margin-top":"30px"})
+
+       $('tr:even').css("backgroun-color","yellow");
+       $('tr:odd').css({"backgroun-color":"brown"});
+
+       $("button").css({"backgroun-color":"black"})
+        });
+
+       
+
+
+        $(":button").click(function(){
+            $("#showall").mousedown(function(){
+              $(this).css("border","10px solid yellow");
+        });
+        $("#showall").mouseup(function(){
+            $(this).css("boder","10px solid green");
+        });
+        });
+       
+
+
+        
+   </script>
